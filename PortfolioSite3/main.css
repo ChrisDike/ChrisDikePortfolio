@@ -1,0 +1,141 @@
+/*
+OLD CSS
+body {
+	background-color: #1E90FF;
+	cursor: auto;
+}
+
+nav li {
+	display: inline;
+	font-family: "Century Gothic", "Arial Narrow", Arial, sans-serif;
+}
+
+nav ul {
+	width: 980px;
+	margin: 0 auto;
+	padding: 6px;
+}
+
+header {
+	width: 980px;
+	position: relative;
+	padding: 15px 15px 15px 15px;
+	margin: 25px auto 25px auto;
+	text-align: center;
+	background-color: #FFFFFF;
+	line-height: 60%;
+}
+
+.button {
+	padding: 8px 12px;
+	border-radius: 15px;
+	background-color: #87CEFA;
+	margin: 6px;
+}
+
+.button:hover {
+	background-color: #FFF8DC;
+	cursor: pointer;
+}
+
+.button:active {
+	background-color: #FFD700;
+}
+
+header h1{
+	font-family: "Arial Black", Arial, sans-serif;
+	font-weight: bold;
+}
+
+header p {
+	font-family: Arial, sans-serif;
+}
+OLD CSS
+*/
+
+
+
+/*Body Color and font size for calculating Ems*/
+body {
+	background-color: #426993;
+	font-size: 16px;
+}
+
+/*Logo margin*/
+header {
+	margin: 55px 0 55px 0;
+}
+
+/*Nav color*/
+nav {
+	background-color: #3c3c3c;
+	border-radius: 4px 4px 0 0;
+}
+
+/*Nav Button vertical text centering*/
+.nav-button{
+	padding: 15px 0 8px 0; /*This centers the text vertically*/
+}
+
+/*Nav font*/
+.nav-button a {
+	font-family: "Century Gothic";
+	font-size: 1.5em;
+	color: #ffffff;
+	text-align: center; /*This centers the text horizontally*/
+	text-decoration: none;
+}
+
+/*Active button background color change*/
+nav .active-button{
+	background-color: #ffffff;
+}
+
+/*Active button link color change*/
+.active-button a{
+	color: #3c3c3c;
+}
+
+/*Color nav buttons backgrounds when hovered*/
+.bootstrap-button:hover{
+	background-color: #7c7c7c;
+}
+
+
+
+/*Main page color*/
+.content {
+	background-color: #ffffff;
+	padding: 15px 25px 15px 25px;
+}
+
+/*Video player - responsive*/
+.vid {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.vid iframe,
+.vid object,
+.vid embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Resume font settings*/
+.resume p {
+	font-size: 1em;
+	width: 65%;
+	margin: 0 auto 0 auto;
+
+}
+
+/*
+.resume p.bHead {
+	font-size: 1.5em;
+}
+*/
