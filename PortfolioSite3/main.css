@@ -59,6 +59,7 @@ OLD CSS
 body {
 	background-color: #426993;
 	font-size: 16px;
+	font-family: 
 }
 
 /*Logo margin*/
@@ -74,33 +75,46 @@ nav {
 
 /*Nav Button vertical text centering*/
 .nav-button{
-	padding: 15px 0 8px 0; /*This centers the text vertically*/
+	/*padding: 15px 0 8px 0; /*This centers the text vertically for Century Gothic font*/
+	padding: 15px 0 5px 0; /*This centers the text vertically for Questrial font*/
 }
 
 /*Nav font*/
 .nav-button a {
-	font-family: "Century Gothic";
+	/*font-family: "Century Gothic", sans-serif;*/
+	font-family: Questrial, sans-serif;
 	font-size: 1.5em;
 	color: #ffffff;
 	text-align: center; /*This centers the text horizontally*/
 	text-decoration: none;
 }
 
-/*Active button background color change*/
+/*Active: button background color change*/
 nav .active-button{
 	background-color: #ffffff;
 }
 
-/*Active button link color change*/
+/*Active: button background color change to the left corner button to maintain the curved corner*/
+nav .active-button-corner{
+	border-radius: 4px 0 0 0;
+	background-color: #ffffff;
+}
+
+/*Active: button link color change*/
 .active-button a{
 	color: #3c3c3c;
 }
 
-/*Color nav buttons backgrounds when hovered*/
+/*Hover: Color nav buttons backgrounds*/
 .bootstrap-button:hover{
 	background-color: #7c7c7c;
 }
 
+/*Hover: Color the left corner nav button to maintain the curved corner*/
+.bootstrap-button-corner:hover{
+	background-color: #7c7c7c;
+	border-radius: 4px 0 0 0;
+}
 
 
 /*Main page color*/
@@ -128,14 +142,14 @@ nav .active-button{
 
 /*Resume font settings*/
 .resume p {
+
 	font-size: 1em;
 	width: 65%;
 	margin: 0 auto 0 auto;
 
 }
 
-/*
-.resume p.bHead {
-	font-size: 1.5em;
+.resume p.title-font {
+	font-family: Oswald, sans-serif;
+	font-size: 1.3em;
 }
-*/
