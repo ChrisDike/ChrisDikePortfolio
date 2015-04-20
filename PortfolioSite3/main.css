@@ -115,7 +115,7 @@ nav .active-button-corner{
 
 .portfolio-overlay{
 	opacity: 0.5;
-	background-color: #000000;
+	background-color: #000000;/*Black = #000000, White = #*/
 	width: 100%;
 	height: 100%;
 	z-index: 10;
@@ -124,11 +124,34 @@ nav .active-button-corner{
 	position: fixed;
 }
 
+.vid-container{
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+
+.video{
+	position: relative;
+	top: 25%;
+	width: 640px;
+	height: 360px;
+	margin: auto auto;
+}
+
+.overlay, .portfolio-overlay{
+	display: none;
+}
+
 /*Video player - responsive*/
 .vid {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
  
 .vid iframe,
@@ -139,6 +162,7 @@ nav .active-button-corner{
     left: 0;
     width: 100%;
     height: 100%;
+    margin: auto auto;
 }
 
 /*PORTFOLIO PAGE ONLY - End*/
