@@ -109,6 +109,12 @@ nav .active-button-corner{
 	color: #3c3c3c;
 }
 
+.glyphicon-remove{
+	color: #ffffff;
+	font-size: 1.875em;
+	float: left;
+}
+
 .portfolio-content{
 	padding-top: 40px;
 }
@@ -124,7 +130,7 @@ nav .active-button-corner{
 	position: fixed;
 }
 
-.vid-container{
+.work-container{
 	width: 100%;
 	height: 100%;
 	z-index: 20;
@@ -138,7 +144,15 @@ nav .active-button-corner{
 	top: 25%;
 	width: 640px;
 	height: 360px;
-	margin: auto auto;
+	margin: 0 auto;
+}
+
+.picture{
+	position: relative;
+	top: 25%;
+	width: 640px;
+	height: 360px;
+	margin: 0 auto;
 }
 
 .overlay, .portfolio-overlay{
