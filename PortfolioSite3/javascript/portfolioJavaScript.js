@@ -17,17 +17,19 @@ $( document ).ready(function() {
 		
 		//Create the video
 		if(workType == 'video'){
-			$('.work-container').append('<div class="video"><a href="#"><i class="glyphicon glyphicon-remove close-button"></i></a><iframe width="640" height="360" src="' + workPath + '" frameborder="0" allowfullscreen></iframe></div>');
-		}else if(workType == 'image'){
+			$('.work-div').addClass('video');
+			$('.work-div').append('<iframe width="640" height="360" src="' + workPath + '" frameborder="0" allowfullscreen></iframe></div>');
+		}/*TEMPORARILY HIDDEN else if(workType == 'image'){
 
-		}
+		}*/
 	})
 
 	//Close portfolio work button
 	$('.close-button').on('click', function() {
 		$('.portfolio-overlay').hide(); //Disable the dark overlay
 		$('.overlay').hide(); //Diasable the work overlay
-		$('.video').remove(); //Remove the video div
+		$('iframe').remove();
+		$('.video').removeClass('video'); //Remove the video div class
 		//$('.picture').remove(); //Remove the picture div
 
 
