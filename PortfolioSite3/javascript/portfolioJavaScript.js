@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 	//Open portfolio work button
-	$('.thumb-button').on('click', function() {
+	$('.thumb-button').on('click', function(event) {
 		//Prevenet the page from jumping to the top on clicks
 		event.preventDefault();
 		
@@ -25,14 +25,25 @@ $( document ).ready(function() {
 	})
 
 	//Close portfolio work button
-	$('.close-button').on('click', function() {
+	$('.close-button').on('click', function(event) {
+		event.preventDefault();
 		$('.portfolio-overlay').hide(); //Disable the dark overlay
 		$('.overlay').hide(); //Diasable the work overlay
-		$('iframe').remove();
+		$('iframe').remove(); //Remove the video from the work-container
 		$('.video').removeClass('video'); //Remove the video div class
 		//$('.picture').remove(); //Remove the picture div
+	})
 
-
+	//Close portfolio on pressing Escape
+	$(document).keyup(function(event) {
+		event.preventDefault();
+		if (event.keyCode == 27){
+			$('.portfolio-overlay').hide(); //Disable the dark overlay
+			$('.overlay').hide(); //Diasable the work overlay
+			$('iframe').remove(); //Remove the video from the work-container
+			$('.video').removeClass('video'); //Remove the video div class
+			//$('.picture').remove(); //Remove the picture div
+		}
 	})
 	
 });
