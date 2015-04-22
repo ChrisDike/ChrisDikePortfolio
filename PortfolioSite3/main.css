@@ -149,15 +149,19 @@ nav .active-button-corner{
 
 .picture{
 	position: relative;
-	top: 25%;
-	width: 640px;
-	height: 360px;
+	top: 10%;
+	/*width: 900px;
+	height: 2472px;*/
 	margin: 0 auto;
+	
+}
+
+.scroll-container{
+	overflow: auto;
 }
 
 .overlay, .portfolio-overlay{
-	display: none;
-}
+	/*display: none; REMOVE WHEN DONE!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 /*Video player - responsive*/
 .vid {

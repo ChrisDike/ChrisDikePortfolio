@@ -18,10 +18,13 @@ $( document ).ready(function() {
 		//Create the video
 		if(workType == 'video'){
 			$('.work-div').addClass('video');
-			$('.work-div').append('<iframe width="640" height="360" src="' + workPath + '" frameborder="0" allowfullscreen></iframe></div>');
-		}/*TEMPORARILY HIDDEN else if(workType == 'image'){
-
-		}*/
+			$('.work-div').append('<iframe width="640" height="360" src="' + workPath + '" frameborder="0" allowfullscreen></iframe>');
+		}else if(workType == 'image'){
+			var picWidth = $(this).data('pic-width');
+			var picHeight = $(this).data('pic-height');
+			//$('.work-div').addClass('picture');
+			//$('.work-div').append('<style class="remove-me">.picture {width: ' + picWidth + 'px; height: 80%;}</style><div class="scroll-container remove-me"><style>.scroll-container {width: 100%; height: 80%;}</style><img src="' + workPath + '" width="' + picWidth + '" height="' + picHeight + '" class="remove-me"></div>');
+		}
 	})
 
 	//Close portfolio work button
@@ -31,7 +34,8 @@ $( document ).ready(function() {
 		$('.overlay').hide(); //Diasable the work overlay
 		$('iframe').remove(); //Remove the video from the work-container
 		$('.video').removeClass('video'); //Remove the video div class
-		//$('.picture').remove(); //Remove the picture div
+		$('.remove-me').remove(); //Remove the img
+		$('.picture').removeClass(); //Remove the picture class
 	})
 
 	//Close portfolio on pressing Escape
@@ -42,7 +46,8 @@ $( document ).ready(function() {
 			$('.overlay').hide(); //Diasable the work overlay
 			$('iframe').remove(); //Remove the video from the work-container
 			$('.video').removeClass('video'); //Remove the video div class
-			//$('.picture').remove(); //Remove the picture div
+			$('.remove-me').remove(); //Remove the img
+			$('.picture').removeClass(); //Remove the picture class
 		}
 	})
 	
