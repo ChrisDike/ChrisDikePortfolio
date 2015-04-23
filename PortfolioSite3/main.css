@@ -88,7 +88,6 @@ nav .active-button-corner{
 
 /*Resume font settings*/
 .resume p {
-
 	font-size: 1em;
 	width: 65%;
 	margin: 0 auto 0 auto;
@@ -109,16 +108,19 @@ nav .active-button-corner{
 	color: #3c3c3c;
 }
 
+/*Style the X button when the portfolio overlay is active*/
 .glyphicon-remove{
 	color: #ffffff;
 	font-size: 1.875em;
 	float: left;
 }
 
+/*Push the content of the page, containing the thumbnails, downward*/
 .portfolio-content{
 	padding-top: 40px;
 }
 
+/*The dark overlay the covers the page when showing content from one of the thumbnails*/
 .portfolio-overlay{
 	opacity: 0.5;
 	background-color: #000000;/*Black = #000000, White = #*/
@@ -130,6 +132,7 @@ nav .active-button-corner{
 	position: fixed;
 }
 
+/*The container that holds the div that contains the portfolio work*/
 .work-container{
 	width: 100%;
 	height: 100%;
@@ -139,6 +142,7 @@ nav .active-button-corner{
 	position: fixed;
 }
 
+/*styles for the work-div once it revciveves the 'video' class*/
 .video{
 	position: relative;
 	top: 25%;
@@ -147,20 +151,23 @@ nav .active-button-corner{
 	margin: 0 auto;
 }
 
+/*styles for the work-div once it revciveves the 'picture' class*/
 .picture{
 	position: relative;
 	top: 10%;
-	width: 0px;
+	/*width: 0px;*/
 	height: 80%;
 	margin: 0 auto;
 }
 
+/*Set the div that contains images so they have scroll bars*/
 .scroll-container{
 	overflow: auto;
 	width: 100%;
 	height: 80%;
 }
 
+/*Hide the portfolio darkening overlay and the content overlay by default*/
 .overlay, .portfolio-overlay{
 	display: none;
 
@@ -183,17 +190,5 @@ nav .active-button-corner{
     height: 100%;
     margin: auto auto;
 }
-
-/*Temp styles for testing*/
-/*.scroll-container {
-	width: 100%;
-	height: 80%;
-}*/
-
-/*.picture {
-	width: 900px;
-	height: 80%;
-}*/
-
 
 /*PORTFOLIO PAGE ONLY - End*/

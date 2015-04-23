@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	
+	//Reusable function to close out all of the portfolio content overlays
 	var closeOverlays = function(event){
 		event.preventDefault();
 		$('.portfolio-overlay').hide(); //Disable the dark overlay
