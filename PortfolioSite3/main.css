@@ -150,19 +150,19 @@ nav .active-button-corner{
 .picture{
 	position: relative;
 	top: 10%;
-	/*width: 900px;
-	height: 80%;*/
+	width: 0px;
+	height: 80%;
 	margin: 0 auto;
 }
 
 .scroll-container{
 	overflow: auto;
-	/*width: 100%;
-	height: 80%;*/
+	width: 100%;
+	height: 80%;
 }
 
 .overlay, .portfolio-overlay{
-	/*display: none; REMOVE WHEN DONE!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	display: none;
 
 /*Video player - responsive*/
 .vid {

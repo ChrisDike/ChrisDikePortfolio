@@ -1,4 +1,16 @@
 $( document ).ready(function() {
+	
+	var closeOverlays = function(event){
+		event.preventDefault();
+		$('.portfolio-overlay').hide(); //Disable the dark overlay
+		$('.overlay').hide(); //Diasable the work overlay
+		$('iframe').remove(); //Remove the video from the work-container
+		$('.video').removeClass('video'); //Remove the video div class
+		$('.remove-me').remove(); //Remove the img
+		$('.picture').removeClass('picture'); //Remove the picture class
+		$('.work-div').removeAttr('style'); //Remove the adjusted width from adding the picture
+	}
+
 	//Open portfolio work button
 	$('.thumb-button').on('click', function(event) {
 		//Prevenet the page from jumping to the top on clicks
@@ -22,32 +34,22 @@ $( document ).ready(function() {
 		}else if(workType == 'image'){
 			var picWidth = $(this).data('pic-width');
 			var picHeight = $(this).data('pic-height');
-			//$('.work-div').addClass('picture');
-			//$('.work-div').append('<style class="remove-me">.picture {width: ' + picWidth + 'px; height: 80%;}</style><div class="scroll-container remove-me"><style>.scroll-container {width: 100%; height: 80%;}</style><img src="' + workPath + '" width="' + picWidth + '" height="' + picHeight + '" class="remove-me"></div>');
+			$('.work-div').addClass('picture');
+			$('.work-div').append('<div class="scroll-container remove-me"><img src="' + workPath + '" width="' + picWidth + '" height="' + picHeight + '"></div>');
+			$('.work-div').css('width', picWidth);
 		}
 	})
 
 	//Close portfolio work button
 	$('.close-button').on('click', function(event) {
-		event.preventDefault();
-		$('.portfolio-overlay').hide(); //Disable the dark overlay
-		$('.overlay').hide(); //Diasable the work overlay
-		$('iframe').remove(); //Remove the video from the work-container
-		$('.video').removeClass('video'); //Remove the video div class
-		$('.remove-me').remove(); //Remove the img
-		$('.picture').removeClass(); //Remove the picture class
+		closeOverlays(event);
 	})
 
 	//Close portfolio on pressing Escape
 	$(document).keyup(function(event) {
-		event.preventDefault();
+		//event.preventDefault();
 		if (event.keyCode == 27){
-			$('.portfolio-overlay').hide(); //Disable the dark overlay
-			$('.overlay').hide(); //Diasable the work overlay
-			$('iframe').remove(); //Remove the video from the work-container
-			$('.video').removeClass('video'); //Remove the video div class
-			$('.remove-me').remove(); //Remove the img
-			$('.picture').removeClass(); //Remove the picture class
+			closeOverlays(event);
 		}
 	})
 	
