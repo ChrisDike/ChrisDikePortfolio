@@ -52,5 +52,15 @@ $( document ).ready(function() {
 			closeOverlays(event);
 		}
 	})
-	
+
+	//Close portfolio by clicking outside of the work
+	$('.work-container').on('click', function(event) {
+		closeOverlays(event);
+	})
+
+	//Make the picture div unclickable
+	$('.picture').on('click', function(event) {
+		preventDefault(event);
+	})
+
 });
